@@ -1,0 +1,91 @@
+body {
+    text-align: center;
+}
+
+#my_photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#links {
+    padding: 10px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+#bio {
+    text-align: justify;
+    margin: 0 20% 0 20%;
+}
+
+#publications {
+    margin: 0 15% 0 15%;
+}
+
+#publications h3 {
+    text-align: left;
+}
+
+.publication_container {
+    width: 100%;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    border-bottom: 2px solid #CCC;
+}
+
+.publication_container:first-child {
+    padding-top: 0;
+}
+
+.publication_container:last-child {
+    border-bottom: none;
+}
+
+.publication_image {
+    vertical-align: top;
+    display: inline-block;
+    width: 40%;
+}
+
+.publication {
+    display: inline-block;
+    text-align: left;
+    width: 59.5%;
+}
+
+.publication * {
+    display: inline-block;
+}
+
+.publication_title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.publication_abstract {
+    margin-top: 5px;
+    max-height: 150px;
+    text-align: justify;
+    font-style: italic;
+    font-size: .75em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+details {
+    width: 100%;
+}
+
+.publication_bibtex {
+    font-size: .75em;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #EEE;
+    min-width: 90%;
+}

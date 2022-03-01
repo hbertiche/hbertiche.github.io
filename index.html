@@ -1,10 +1,398 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Hugo Bertiche</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1>TEST</h1>
-    </body>
+
+<head>
+    <title>Hugo Bertiche</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Hugo Bertiche</h1>
+    <img id="my_photo" src="imgs/me.jpg">
+    <h3>Ph.D. candidate at the Universitat de Barcelona</h3>
+    <p>[<a href="pdf/CV.pdf">Resume</a>]</p>
+    <div id="links">
+        <a href="https://scholar.google.com/citations?user=vF8Ef0MAAAAJ&hl=es&oi=ao"><img class="icon" src="imgs/google_scholar_logo.png"></a>
+        <a href="https://www.linkedin.com/in/hugo-bertiche-argila-2aa0a3161/"><img class="icon"
+                src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"></a>
+        <a href="https://twitter.com/HBertiche"><img class="icon" src="imgs/twitter_logo.png"></a>
+        <a href="https://github.com/hbertiche"><img class="icon" src="imgs/github_logo.png"></a>
+    </div>
+    <div id="bio">
+        I obtained my Bachelor degree in <b>Aeronautical Engineering</b> at the Universitat Politècnica de Catalunya (<a
+            href="https://www.upc.edu/ca">UPC</a>) in 2015.
+        Later, I received my <b>MSc in Artificial Intelligence</b> from the Universitat de Barcelona (<a
+            href="https://www.ub.edu/web/portal/ca">UB</a>), Universitat Politècnica de Catalunya (<a
+            href="https://www.upc.edu/ca">UPC</a>) and Universitat Rovira i Virgili (<a
+            href="https://www.urv.cat/es/">URV</a>) in 2017.
+        Currently, I am a last year Ph.D. student at the Universitat de Barcelona (<a
+            href="https://www.ub.edu/web/portal/ca">UB</a>), as a member of the Human Pose and Behaviour Analysis (<a
+            href="https://sergioescalera.com/students/">HuPBA</a>). My Ph.D. begun with focus on Computer Vision and 3D
+        human pose and shape recovery through deep learning. I quickly transitioned to 3D clothing in human centric
+        domains, which is more strongly aligned with my interests: deep learning, computer graphics and physics. I
+        believe deep learning has barely scratched the surface of its potential within the 3D garment domain and I am
+        eager to see what we all will be able to build in the future.<br>
+    </div>
+    <div id="publications">
+        <h3>Publications</h3>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/PBNS.jpeg">
+            <div class="publication">
+                <div class="publication_title">PBNS: Physically Based Neural Simulation for Unsupervised Garment Pose
+                    Space Deformation</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi and Sergio Escalera</div>
+                <div class="publication_reference">ACM Trans. Graph. 40, 6, Article 198 (December 2021), 14 pages.
+                    DOI:https://doi.org/10.1145/3478513.3480479</div>
+                <div class="publication_abstract">We present a methodology to automatically obtain Pose Space
+                    Deformation (PSD) basis for rigged garments through deep learning. Classical approaches rely on
+                    Physically Based Simulations (PBS) to animate clothes. These are general solutions that, given a
+                    sufficiently fine-grained discretization of space and time, can achieve highly realistic results.
+                    However, they are computationally expensive and any scene modification prompts the need of
+                    re-simulation. Linear Blend Skinning (LBS) with PSD offers a lightweight alternative to PBS, though,
+                    it needs huge volumes of data to learn proper PSD. We propose using deep learning, formulated as an
+                    implicit PBS, to un-supervisedly learn realistic cloth Pose Space Deformations in a constrained
+                    scenario: dressed humans. Furthermore, we show it is possible to train these models in an amount of
+                    time comparable to a PBS of a few sequences. To the best of our knowledge, we are the first to
+                    propose a neural simulator for cloth. While deep-based approaches in the domain are becoming a
+                    trend, these are data-hungry models. Moreover, authors often propose complex formulations to better
+                    learn wrinkles from PBS data. Supervised learning leads to physically inconsistent predictions that
+                    require collision solving to be used. Also, dependency on PBS data limits the scalability of these
+                    solutions, while their formulation hinders its applicability and compatibility. By proposing an
+                    unsupervised methodology to learn PSD for LBS models (3D animation standard), we overcome both of
+                    these drawbacks. Results obtained show cloth-consistency in the animated garments and meaningful
+                    pose-dependant folds and wrinkles. Our solution is extremely efficient, handles multiple layers of
+                    cloth, allows unsupervised outfit resizing and can be easily applied to any custom 3D avatar.</div>
+                <div class="publication_links">
+                    [<a href="https://arxiv.org/abs/2012.11310">arXiv</a>][<a
+                        href="https://youtu.be/ALwhjm40zRg">Video</a>][<a
+                        href="https://www.github.com/hbertiche/PBNS">Code</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @article{10.1145/3478513.3480479,<br>
+                        &emsp;author = {Bertiche, Hugo and Madadi, Meysam and Escalera, Sergio},<br>
+                        &emsp;title = {PBNS: Physically Based Neural Simulation for Unsupervised Garment Pose Space
+                        Deformation},<br>
+                        &emsp;year = {2021},<br>
+                        &emsp;issue_date = {December 2021},<br>
+                        &emsp;publisher = {Association for Computing Machinery},<br>
+                        &emsp;address = {New York, NY, USA},<br>
+                        &emsp;volume = {40},<br>
+                        &emsp;number = {6},<br>
+                        &emsp;issn = {0730-0301},<br>
+                        &emsp;url = {https://doi.org/10.1145/3478513.3480479},<br>
+                        &emsp;doi = {10.1145/3478513.3480479},<br>
+                        &emsp;journal = {ACM Trans. Graph.},<br>
+                        &emsp;month = {dec},<br>
+                        &emsp;articleno = {198},<br>
+                        &emsp;numpages = {14},<br>
+                        &emsp;keywords = {garment, deep learning, animation, simulation, pose space deformation,
+                        physics, neural network}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/DeePSD.png">
+            <div class="publication">
+                <div class="publication_title">DeePSD: Automatic deep skinning and pose space deformation for 3D garment
+                    animation</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi, Emilio Tylson and Sergio Escalera</div>
+                <div class="publication_reference">In Proceedings of the IEEE/CVF International Conference on Computer
+                    Vision (pp. 5471-5480).</div>
+                <div class="publication_abstract">We present a novel solution to the garment animation problem through
+                    deep learning. Our contribution allows animating any template outfit with arbitrary topology and
+                    geometric complexity. Recent works develop models for garment edition, resizing and animation at the
+                    same time by leveraging the support body model (encoding garments as body homotopies). This leads to
+                    complex engineering solutions that suffer from scalability, applicability and compatibility. By
+                    limiting our scope to garment animation only, we are able to propose a simple model that can animate
+                    any outfit, independently of its topology, vertex order or connectivity. Our proposed architecture
+                    maps outfits to animated 3D models into the standard format for 3D animation (blend weights and
+                    blend shapes matrices), automatically providing of compatibility with any graphics engine. We also
+                    propose a methodology to complement supervised learning with an unsupervised physically based
+                    learning that implicitly solves collisions and enhances cloth quality.</div>
+                <div class="publication_links">
+                    [<a href="https://arxiv.org/abs/2009.02715">arXiv</a>][<a
+                        href="https://www.github.com/hbertiche/DeePSD">Code</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @InProceedings{Bertiche_2021_ICCV,<br>
+                        &emsp;author = {Bertiche, Hugo and Madadi, Meysam and Tylson, Emilio and Escalera, Sergio},<br>
+                        &emsp;title = {DeePSD: Automatic Deep Skinning and Pose Space Deformation for 3D Garment
+                        Animation},<br>
+                        &emsp;booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision
+                        (ICCV)},<br>
+                        &emsp;month = {October},<br>
+                        &emsp;year = {2021},<br>
+                        &emsp;pages = {5471-5480}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/qualitative2.png">
+            <div class="publication">
+                <div class="publication_title">Neural Implicit Surfaces for Efficient and Accurate Collisions in
+                    Physically Based Simulations</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi and Sergio Escalera</div>
+                <div class="publication_reference">arXiv:2110.01614</div>
+                <div class="publication_abstract">Current trends in the computer graphics community propose leveraging
+                    the massive parallel computational power
+                    of GPUs to accelerate physically based simulations. Collision detection and solving is a fundamental
+                    part of this process. It is also the most significant bottleneck on physically
+                    based simulations and it easily becomes intractable as the
+                    number of vertices in the scene increases. Brute force approaches carry a quadratic growth in both
+                    computational
+                    time and memory footprint. While their parallelization is
+                    trivial in GPUs, their complexity discourages from using
+                    such approaches. Acceleration structures –such as BVH–
+                    are often applied to increase performance, achieving logarithmic computational times for individual
+                    point queries.
+                    Nonetheless, their memory footprint also grows rapidly and
+                    their parallelization in a GPU is problematic due to their
+                    branching nature. We propose using implicit surface representations learnt through deep learning for
+                    collision handling in physically based simulations. Our proposed architecture has a complexity of
+                    O(n) –or O(1) for a single point
+                    query– and has no parallelization issues. We will show
+                    how this permits accurate and efficient collision handling
+                    in physically based simulations, more specifically, for cloth.
+                    In our experiments, we query up to 1M points in ∼ 300
+                    milliseconds</div>
+                <div class="publication_links">
+                    [<a href="https://arxiv.org/abs/2110.01614">arXiv</a>]
+                    [<a href="https://youtu.be/F1kQrYXWtEI">Video</a>]
+                    [<a href="https://github.com/hbertiche/NeuralColliders">Code</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @article{DBLP:journals/corr/abs-2110-01614,<br>
+                        &emsp;author = {Hugo Bertiche and
+                        Meysam Madadi and
+                        Sergio Escalera},<br>
+                        &emsp;title = {Neural Implicit Surfaces for Efficient and Accurate Collisions in
+                        Physically Based Simulations},<br>
+                        &emsp;journal = {CoRR},<br>
+                        &emsp;volume = {abs/2110.01614},<br>
+                        &emsp;year = {2021},<br>
+                        &emsp;url = {https://arxiv.org/abs/2110.01614},<br>
+                        &emsp;eprinttype = {arXiv},<br>
+                        &emsp;eprint = {2110.01614},<br>
+                        &emsp;timestamp = {Fri, 08 Oct 2021 15:47:55 +0200},<br>
+                        &emsp;biburl = {https://dblp.org/rec/journals/corr/abs-2110-01614.bib},<br>
+                        &emsp;bibsource = {dblp computer science bibliography, https://dblp.org}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/DeepParamSurf.png">
+            <div class="publication">
+                <div class="publication_title">Deep Parametric Surfaces for 3D Outfit Reconstruction from Single View
+                    Image</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi and Sergio Escalera</div>
+                <div class="publication_reference">2021 16th IEEE International Conference on Automatic Face and Gesture
+                    Recognition (FG 2021), 2021, pp. 1-8, doi: 10.1109/FG52635.2021.9667017.</div>
+                <div class="publication_abstract">We present a methodology to retrieve analytical surfaces parametrized
+                    as a neural network. Previous works on 3D reconstruction yield point clouds, voxelized objects or
+                    meshes. Instead, our approach yields 2-manifolds in the euclidean space through deep learning. To
+                    this end, we implement a novel formulation for fully connected layers as parametrized manifolds that
+                    allows continuous predictions with differential geometry. Based on this property we propose a novel
+                    smoothness loss. Results on CLOTH3D++ dataset show the possibility to infer different topologies and
+                    the benefits of the smoothness term based on differential geometry.</div>
+                <div class="publication_links">
+                    [<a href="https://ieeexplore.ieee.org/document/9667017">Paper</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @INPROCEEDINGS{9667017,<br>
+                        &emsp;author={Bertiche, Hugo and Madadi, Meysam and Escalera, Sergio},<br>
+                        &emsp;booktitle={2021 16th IEEE International Conference on Automatic Face and Gesture
+                        Recognition (FG 2021)}, <br>
+                        &emsp;title={Deep Parametric Surfaces for 3D Outfit Reconstruction from Single View Image}, <br>
+                        &emsp;year={2021},<br>
+                        &emsp;volume={},<br>
+                        &emsp;number={},<br>
+                        &emsp;pages={1-8},<br>
+                        &emsp;doi={10.1109/FG52635.2021.9667017}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/cloth3d++.png">
+            <div class="publication">
+                <div class="publication_title">Learning Cloth Dynamics: 3D+Texture Garment Reconstruction Benchmark
+                </div>
+                <div class="publication_authors">Meysam Madadi, Hugo Bertiche, Wafa Bouzouita, Isabelle Guyon and Sergio
+                    Escalera</div>
+                <div class="publication_reference">Proceedings of the NeurIPS 2020 Competition and Demonstration Track,
+                    PMLR 133:57-76, 2021.</div>
+                <div class="publication_abstract">Human avatars are important targets in many computer applications.
+                    Accurately tracking, capturing, reconstructing and animating the human body, face and garments in 3D
+                    are critical for human-computer interaction, gaming, special effects and virtual reality. In the
+                    past, this has required extensive manual animation. Regardless of the advances in human body and
+                    face reconstruction, still modeling, learning and analyzing human dynamics need further attention.
+                    In this paper we plan to push the research in this direction, e.g. understanding human dynamics in
+                    2D and 3D, with special attention to garments. We provide a large-scale dataset (more than 2M
+                    frames) of animated garments with variable topology and type, calledCLOTH3D++. The dataset contains
+                    RGBA video sequences paired with its corresponding 3D data. We pay special care to garment dynamics
+                    and realistic rendering of RGB data, including lighting, fabric type and texture. With this dataset,
+                    we hold a competition at NeurIPS2020. We design three tracks so participants can compete to develop
+                    the best method to perform 3D garment reconstruction in a sequence from (1) 3D-to-3D garments, (2)
+                    RGB-to-3D garments, and (3) RGB-to-3D garments plus texture. We also provide a baseline method,
+                    based on graph convolutional networks, for each track. Baseline results show that there is a lot of
+                    room for improvements. However, due to the challenging nature of the problem, no participant could
+                    outperform the baselines.</div>
+                <div class="publication_links">
+                    [<a href="http://proceedings.mlr.press/v133/madadi21a/madadi21a.pdf">Paper</a>]
+                    [<a href="http://chalearnlap.cvc.uab.es/dataset/38/description/">Dataset</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @InProceedings{pmlr-v133-madadi21a,<br>
+                        &emsp;title = {Learning Cloth Dynamics: 3D+Texture Garment Reconstruction Benchmark},<br>
+                        &emsp;author = {Madadi, Meysam and Bertiche, Hugo and Bouzouita, Wafa and Guyon, Isabelle and
+                        Escalera, Sergio},<br>
+                        &emsp;booktitle = {Proceedings of the NeurIPS 2020 Competition and Demonstration Track},<br>
+                        &emsp;pages = {57--76},<br>
+                        &emsp;year = {2021},<br>
+                        &emsp;editor = {Escalante, Hugo Jair and Hofmann, Katja},<br>
+                        &emsp;volume = {133},<br>
+                        &emsp;series = {Proceedings of Machine Learning Research},<br>
+                        &emsp;month = {06--12 Dec},<br>
+                        &emsp;publisher = {PMLR},<br>
+                        &emsp;pdf = {http://proceedings.mlr.press/v133/madadi21a/madadi21a.pdf},<br>
+                        &emsp;url = {https://proceedings.mlr.press/v133/madadi21a.html},<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/3DLandmarks.png">
+            <div class="publication">
+                <div class="publication_title">Deep unsupervised 3D human body reconstruction from a sparse set of
+                    landmarks
+                </div>
+                <div class="publication_authors">Meysam Madadi, Hugo Bertiche and Sergio Escalera</div>
+                <div class="publication_reference">Int J Comput Vis 129, 2499–2512 (2021).
+                    https://doi.org/10.1007/s11263-021-01488-2</div>
+                <div class="publication_abstract">In this paper we propose the first deep unsupervised approach in human
+                    body reconstruction to estimate body surface from a sparse set of landmarks, so called DeepMurf. We
+                    apply a denoising autoencoder to estimate missing landmarks. Then we apply an attention model to
+                    estimate body joints from landmarks. Finally, a cascading network is applied to regress parameters
+                    of a statistical generative model that reconstructs body. Our set of proposed loss functions allows
+                    us to train the network in an unsupervised way. Results on four public datasets show that our
+                    approach accurately reconstructs the human body from real world mocap data.</div>
+                <div class="publication_links">
+                    [<a href="https://arxiv.org/abs/2106.12282">arXiv</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @article{madadi2021deep,<br>
+                        &emsp;title={Deep unsupervised 3D human body reconstruction from a sparse set of landmarks},<br>
+                        &emsp;author={Madadi, Meysam and Bertiche, Hugo and Escalera, Sergio},<br>
+                        &emsp;journal={International Journal of Computer Vision},<br>
+                        &emsp;volume={129},<br>
+                        &emsp;number={8},<br>
+                        &emsp;pages={2499--2512},<br>
+                        &emsp;year={2021},<br>
+                        &emsp;publisher={Springer}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/CLOTH3D.png">
+            <div class="publication">
+                <div class="publication_title">CLOTH3D: Clothed 3D Humans</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi and Sergio Escalera</div>
+                <div class="publication_reference">In European Conference on Computer Vision (pp. 344-359). Springer,
+                    Cham.</div>
+                <div class="publication_abstract">We present CLOTH3D, the first big scale synthetic dataset
+                    of 3D clothed human sequences. CLOTH3D contains a large variability on garment type, topology,
+                    shape, size, tightness and fabric. Clothes
+                    are simulated on top of thousands of different pose sequences and body
+                    shapes, generating realistic cloth dynamics. We provide the dataset with
+                    a generative model for cloth generation. We propose a Conditional Variational Auto-Encoder (CVAE)
+                    based on graph convolutions (GCVAE)
+                    to learn garment latent spaces. This allows for realistic generation of 3D
+                    garments on top of SMPL model for any pose and shape.</div>
+                <div class="publication_links">
+                    [<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650341.pdf">Paper</a>]
+                    [<a href="http://chalearnlap.cvc.uab.es/dataset/38/description/">Dataset</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @inproceedings{bertiche2020cloth3d,<br>
+                        &emsp;title={CLOTH3D: clothed 3d humans},<br>
+                        &emsp;author={Bertiche, Hugo and Madadi, Meysam and Escalera, Sergio},<br>
+                        &emsp;booktitle={European Conference on Computer Vision},<br>
+                        &emsp;pages={344--359},<br>
+                        &emsp;year={2020},<br>
+                        &emsp;organization={Springer}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/SMPLR.png">
+            <div class="publication">
+                <div class="publication_title">SMPLR: Deep learning based SMPL reverse for 3D human pose and shape
+                    recovery</div>
+                <div class="publication_authors">Meysam Madadi, Hugo Bertiche and Sergio Escalera</div>
+                <div class="publication_reference">Pattern Recognition, 106, 107472.</div>
+                <div class="publication_abstract">Current state-of-the-art in 3D human pose and shape recovery relies on
+                    deep neural networks and statistical morphable body models, such as the Skinned Multi-Person Linear
+                    model (SMPL). However, regardless of the advantages of having both body pose and shape, SMPL-based
+                    solutions have shown difficulties to predict 3D bodies accurately. This is mainly due to the
+                    unconstrained nature of SMPL, which may generate unrealistic body meshes. Because of this,
+                    regression of SMPL parameters is a difficult task, often addressed with complex regularization
+                    terms. In this paper we propose to embed SMPL within a deep model to accurately estimate 3D pose and
+                    shape from a still RGB image. We use CNN-based 3D joint predictions as an intermediate
+                    representation to regress SMPL pose and shape parameters. Later, 3D joints are reconstructed again
+                    in the SMPL output. This module can be seen as an autoencoder where the encoder is a deep neural
+                    network and the decoder is SMPL model. We refer to this as SMPL reverse (SMPLR). By implementing
+                    SMPLR as an encoder-decoder we avoid the need of complex constraints on pose and shape. Furthermore,
+                    given that in-the-wild datasets usually lack accurate 3D annotations, it is desirable to lift 2D
+                    joints to 3D without pairing 3D annotations with RGB images. Therefore, we also propose a denoising
+                    autoencoder (DAE) module between CNN and SMPLR, able to lift 2D joints to 3D and partially recover
+                    from structured error. We evaluate our method on SURREAL and Human3.6M datasets, showing improvement
+                    over SMPL-based state-of-the-art alternatives by about 4 and 25 millimeters, respectively.</div>
+                <div class="publication_links">
+                    [<a href="https://arxiv.org/abs/1812.10766">arXiv</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @article{madadi2020smplr,<br>
+                        &emsp;title={SMPLR: Deep learning based SMPL reverse for 3D human pose and shape recovery},<br>
+                        &emsp;author={Madadi, Meysam and Bertiche, Hugo and Escalera, Sergio},<br>
+                        &emsp;journal={Pattern Recognition},<br>
+                        &emsp;volume={106},<br>
+                        &emsp;pages={107472},<br>
+                        &emsp;year={2020},<br>
+                        &emsp;publisher={Elsevier}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
+</body>
+
 </html>
