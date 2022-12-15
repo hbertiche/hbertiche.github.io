@@ -10,10 +10,10 @@
 <body>
     <h1>Hugo Bertiche</h1>
     <img id="my_photo" src="imgs/me.jpg">
-    <h3>Ph.D. candidate at the Universitat de Barcelona</h3>
     <p>[<a href="pdf/CV.pdf">Resume</a>]</p>
     <div id="links">
-        <a href="https://scholar.google.com/citations?user=vF8Ef0MAAAAJ&hl=es&oi=ao"><img class="icon" src="imgs/google_scholar_logo.png"></a>
+        <a href="https://scholar.google.com/citations?user=vF8Ef0MAAAAJ&hl=es&oi=ao"><img class="icon"
+                src="imgs/google_scholar_logo.png"></a>
         <a href="https://www.linkedin.com/in/hugo-bertiche-argila-2aa0a3161/"><img class="icon"
                 src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"></a>
         <a href="https://twitter.com/HBertiche"><img class="icon" src="imgs/twitter_logo.png"></a>
@@ -36,6 +36,60 @@
     </div>
     <div id="publications">
         <h3>Publications</h3>
+        <div class="publication_container">
+            <img class="publication_image" src="imgs/publications/NCS.png">
+            <div class="publication">
+                <div class="publication_title">Neural Cloth Simulation</div>
+                <div class="publication_authors">Hugo Bertiche, Meysam Madadi and Sergio Escalera</div>
+                <div class="publication_reference">ACM Trans. Graph. 41, 6, Article 220 (December 2022), 14 pages.
+                    DOI:https://doi.org/10.1145/3550454.3555491</div>
+                <div class="publication_abstract">We present a general framework for the garment animation problem
+                    through unsupervised deep learning inspired in physically based simulation. Existing trends in the
+                    literature already explore this possibility. Nonetheless, these approaches do not handle cloth
+                    dynamics. Here, we propose the first methodology able to learn realistic cloth dynamics
+                    unsupervisedly, and henceforth, a general formulation for neural cloth simulation. The key to
+                    achieve this is to adapt an existing optimization scheme for motion from simulation based
+                    methodologies to deep learning. Then, analyzing the nature of the problem, we devise an architecture
+                    able to automatically disentangle static and dynamic cloth subspaces by design. We will show how
+                    this improves model performance. Additionally, this opens the possibility of a novel motion
+                    augmentation technique that greatly improves generalization. Finally, we show it also allows to
+                    control the level of motion in the predictions. This is a useful, never seen before, tool for
+                    artists. We provide of detailed analysis of the problem to establish the bases of neural cloth
+                    simulation and guide future research into the specifics of this domain.</div>
+                <div class="publication_links">
+                    [<a href="https://hbertiche.github.io/NeuralClothSim">Project Page</a>]
+                    [<a href="https://dl.acm.org/doi/10.1145/3550454.3555491">Paper</a>]
+                    [<a>arXiv</a>]
+                    [<a href="https://youtu.be/6HxXLBzRXFg">Video 1</a>]
+                    [<a href="https://youtu.be/iRbNlQHwbbA">Video 2</a>]
+                    [<a href="https://www.github.com/hbertiche/NeuralClothSim">Code</a>]
+                </div>
+                <details>
+                    <summary>[Bibtex]</summary>
+                    <div class="publication_bibtex">
+                        @article{10.1145/3550454.3555491,<br>
+                        &emsp;author = {Bertiche, Hugo and Madadi, Meysam and Escalera, Sergio},<br>
+                        &emsp;title = {Neural Cloth Simulation},<br>
+                        &emsp;year = {2022},<br>
+                        &emsp;issue_date = {December 2022},<br>
+                        &emsp;publisher = {Association for Computing Machinery},<br>
+                        &emsp;address = {New York, NY, USA},<br>
+                        &emsp;volume = {41},<br>
+                        &emsp;number = {6},<br>
+                        &emsp;issn = {0730-0301},<br>
+                        &emsp;url = {https://doi.org/10.1145/3550454.3555491},<br>
+                        &emsp;doi = {10.1145/3550454.3555491},<br>
+                        &emsp;journal = {ACM Trans. Graph.},<br>
+                        &emsp;month = {dec},<br>
+                        &emsp;articleno = {220},<br>
+                        &emsp;numpages = {14},<br>
+                        &emsp;keywords = {deep learning, disentangle, simulation, unsupervised, dynamics, neural
+                        network, cloth}<br>
+                        }
+                    </div>
+                </details>
+            </div>
+        </div>
         <div class="publication_container">
             <img class="publication_image" src="imgs/publications/PBNS.jpeg">
             <div class="publication">
@@ -118,7 +172,8 @@
                     learning that implicitly solves collisions and enhances cloth quality.</div>
                 <div class="publication_links">
                     [<a href="https://hbertiche.github.io/DeePSD">Project Page</a>]
-                    [<a href="https://openaccess.thecvf.com/content/ICCV2021/html/Bertiche_DeePSD_Automatic_Deep_Skinning_and_Pose_Space_Deformation_for_3D_ICCV_2021_paper.html">Paper</a>]
+                    [<a
+                        href="https://openaccess.thecvf.com/content/ICCV2021/html/Bertiche_DeePSD_Automatic_Deep_Skinning_and_Pose_Space_Deformation_for_3D_ICCV_2021_paper.html">Paper</a>]
                     [<a href="https://arxiv.org/abs/2009.02715">arXiv</a>]
                     [<a href="https://www.github.com/hbertiche/DeePSD">Code</a>]
                 </div>
